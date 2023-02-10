@@ -1,8 +1,7 @@
 package io.csanecki.modulith.alfa;
 
-import io.csanecki.modulith.beta.BetaComponent;
-import io.csanecki.modulith.delta.DeltaComponent;
 import io.csanecki.modulith.dzeta.DzetaComponent;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,23 +9,19 @@ public class AlfaComponent {
 
     private static final String ALFA = "alfa";
 
-    private final BetaComponent betaComponent;
-    private final DeltaComponent deltaComponent;
+    private final ApplicationEventPublisher applicationEventPublisher;
     private final DzetaComponent dzetaComponent;
 
     public AlfaComponent(
-        BetaComponent betaComponent,
-        DeltaComponent deltaComponent,
+        ApplicationEventPublisher applicationEventPublisher,
         DzetaComponent dzetaComponent) {
-        this.betaComponent = betaComponent;
-        this.deltaComponent = deltaComponent;
+        this.applicationEventPublisher = applicationEventPublisher;
         this.dzetaComponent = dzetaComponent;
     }
 
     public void callAll() {
-        betaComponent.doSomething(ALFA);
-        deltaComponent.doSomething(ALFA);
         dzetaComponent.doSomething(ALFA);
+        applicationEventPublisher.publishEvent(new AlfaEvent());
     }
 
     public void doSomething(String component) {
