@@ -1,6 +1,5 @@
 package io.csanecki.modulith.gamma;
 
-import io.csanecki.modulith.alfa.AlfaEvent;
 import io.csanecki.modulith.epsilon.EpsilonComponent;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
@@ -22,7 +21,7 @@ public class GammaComponent {
 
     public void callAll() {
         epsilonComponent.doSomething(GAMMA);
-        applicationEventPublisher.publishEvent(new AlfaEvent());
+        applicationEventPublisher.publishEvent(new GammaEvent());
     }
 
     public void doSomething(String component) {
