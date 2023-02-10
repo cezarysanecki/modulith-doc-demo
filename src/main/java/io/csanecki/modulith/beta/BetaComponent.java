@@ -1,7 +1,9 @@
 package io.csanecki.modulith.beta;
 
 import io.csanecki.modulith.delta.DeltaComponent;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BetaComponent {
 
     private static final String BETA = "beta";

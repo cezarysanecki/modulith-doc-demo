@@ -1,7 +1,9 @@
 package io.csanecki.modulith.delta;
 
 import io.csanecki.modulith.gamma.GammaComponent;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DeltaComponent {
 
     private static final String DELTA = "delta";

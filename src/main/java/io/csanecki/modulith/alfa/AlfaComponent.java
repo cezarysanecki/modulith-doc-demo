@@ -3,7 +3,9 @@ package io.csanecki.modulith.alfa;
 import io.csanecki.modulith.beta.BetaComponent;
 import io.csanecki.modulith.delta.DeltaComponent;
 import io.csanecki.modulith.dzeta.DzetaComponent;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AlfaComponent {
 
     private static final String ALFA = "alfa";

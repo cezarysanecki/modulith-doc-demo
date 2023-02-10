@@ -1,7 +1,9 @@
 package io.csanecki.modulith.dzeta;
 
 import io.csanecki.modulith.epsilon.EpsilonComponent;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DzetaComponent {
 
     private static final String DZETA = "dzeta";

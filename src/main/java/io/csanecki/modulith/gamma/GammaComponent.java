@@ -1,7 +1,9 @@
 package io.csanecki.modulith.gamma;
 
 import io.csanecki.modulith.epsilon.EpsilonComponent;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GammaComponent {
 
     private static final String GAMMA = "gamma";
