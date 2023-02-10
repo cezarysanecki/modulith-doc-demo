@@ -28,4 +28,10 @@ class ModulithDocumentationTest {
             .writeIndividualModulesAsPlantUml(oldStyleUml);
     }
 
+    @Test
+    void createDocumentationCanvas() {
+        new Documenter(modules)
+            .writeModuleCanvases();
+    }
+
 }
