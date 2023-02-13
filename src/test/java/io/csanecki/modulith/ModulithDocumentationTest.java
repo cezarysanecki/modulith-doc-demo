@@ -1,13 +1,11 @@
 package io.csanecki.modulith;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.modulith.core.ApplicationModules;
 import org.springframework.modulith.docs.Documenter;
 import org.springframework.modulith.docs.Documenter.DiagramOptions;
 import org.springframework.modulith.docs.Documenter.DiagramOptions.DiagramStyle;
 
-@SpringBootTest
 class ModulithDocumentationTest {
 
     ApplicationModules modules = ApplicationModules.of(ModulithDocDemoApplication.class);
