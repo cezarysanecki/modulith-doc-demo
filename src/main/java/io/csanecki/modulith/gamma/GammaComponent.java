@@ -1,6 +1,5 @@
 package io.csanecki.modulith.gamma;
 
-import io.csanecki.modulith.epsilon.EpsilonComponent;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
@@ -10,17 +9,12 @@ public class GammaComponent {
     private static final String GAMMA = "gamma";
 
     private final ApplicationEventPublisher applicationEventPublisher;
-    private final EpsilonComponent epsilonComponent;
 
-    public GammaComponent(
-        ApplicationEventPublisher applicationEventPublisher,
-        EpsilonComponent epsilonComponent) {
+    public GammaComponent(ApplicationEventPublisher applicationEventPublisher) {
         this.applicationEventPublisher = applicationEventPublisher;
-        this.epsilonComponent = epsilonComponent;
     }
 
     public void callAll() {
-        epsilonComponent.doSomething(GAMMA);
         applicationEventPublisher.publishEvent(new GammaEvent());
     }
 
