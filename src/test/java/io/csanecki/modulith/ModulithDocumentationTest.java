@@ -8,7 +8,8 @@ import org.springframework.modulith.docs.Documenter.DiagramOptions.DiagramStyle;
 
 class ModulithDocumentationTest {
 
-    ApplicationModules modules = ApplicationModules.of(ModulithDocDemoApplication.class);
+    ApplicationModules modules = ApplicationModules.of(
+        ModulithDocDemoApplication.class);
 
     @Test
     void createDocumentation() {
